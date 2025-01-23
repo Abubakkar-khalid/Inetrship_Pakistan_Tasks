@@ -60,32 +60,32 @@ const InternshipListingsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
       {/* Header Section */}
-      <header className="bg-blue-600 text-white text-center py-10">
-        <h1 className="text-4xl font-bold">Internship Listings</h1>
-        <p className="mt-2 text-lg">Find the perfect internship opportunity to kickstart your career.</p>
+      <header className="bg-blue-600 text-white text-center py-8">
+        <h1 className="text-2xl sm:text-4xl font-bold">Internship Listings</h1>
+        <p className="mt-2 text-sm sm:text-lg">Find the perfect internship opportunity to kickstart your career.</p>
       </header>
 
       {/* Filters */}
-      <div className="max-w-4xl mx-auto mt-8 p-4">
+      <div className="max-w-4xl mx-auto mt-6 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <input
             type="text"
             placeholder="Search by title"
-            className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="p-2 sm:p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <input
             type="text"
             placeholder="Search by location"
-            className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="p-2 sm:p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           />
           <input
             type="text"
             placeholder="Search by duration"
-            className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="p-2 sm:p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
             value={duration}
             onChange={(e) => setDuration(e.target.value)}
           />
@@ -93,17 +93,17 @@ const InternshipListingsPage = () => {
       </div>
 
       {/* Internship Cards */}
-      <div className="max-w-6xl mx-auto mt-8 p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto mt-8 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredInternships.map((internship, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-            <h2 className="text-2xl font-semibold mb-2">{internship.title}</h2>
+          <div key={index} className="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-2">{internship.title}</h2>
             <p className="text-blue-600 font-medium mb-1">{internship.company}</p>
             <p className="text-gray-600 mb-1">Location: {internship.location}</p>
             <p className="text-gray-600 mb-1">Duration: {internship.duration}</p>
             <p className="text-gray-700 mt-3">{internship.description}</p>
             <button
               onClick={() => handleApplyNow(internship)}
-              className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-medium"
+              className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-medium text-sm sm:text-base"
             >
               Apply Now
             </button>
@@ -113,12 +113,14 @@ const InternshipListingsPage = () => {
 
       {/* No Results Message */}
       {filteredInternships.length === 0 && (
-        <p className="mt-8 text-center text-gray-600">No internships match your criteria.</p>
+        <p className="mt-8 text-center text-gray-600 px-4">
+          No internships match your criteria.
+        </p>
       )}
 
       {/* Footer */}
       <footer className="bg-blue-600 text-white text-center py-6 mt-10">
-        <p>&copy; 2025 Internship Pakistan. All Rights Reserved.</p>
+        <p className="text-sm">&copy; 2025 Internship Pakistan. All Rights Reserved.</p>
       </footer>
     </div>
   );
