@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Adventures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll("nav a").forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header Section -->
+    <header class="flex items-center justify-between p-4 bg-blue-600 text-white fixed w-full top-0 z-10">
+        <h1 class="text-xl font-bold">Wanderlust Adventures</h1>
+        <nav>
+            <ul class="hidden md:flex space-x-4">
+                <a href="index.html" class="hover:text-orange-300">Home</a>
+                <li><a href="/" class="hover:text-orange-300">Destinations</a></li>
+                <li><a href="/" class="hover:text-orange-300">Packages</a></li>
+                <li><a href="/" class="hover:text-orange-300">About Us</a></li>
+                <li><a href="/" class="hover:text-orange-300">Testimonials</a></li>
+                <li><a href="/" class="hover:text-orange-300">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="/"   class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-700 transition">Book Now</a>
+    </header>
+    
+
+    
+        <!-- Booking Form -->
+        <div class="mt-10 max-w-3xl mx-auto bg-white text-gray-800 p-8 rounded-lg shadow-xl">
+            <form class="space-y-6">
+    
+                <!-- Destination Select -->
+                <div>
+                    <label for="destination" class="block text-lg font-semibold">Select Destination</label>
+                    <select id="destination" name="destination" class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="paris">Paris</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="skardu">Skardu</option>
+                        <option value="tokyo">Tokyo</option>
+                    </select>
+                </div>
+    
+                <!-- Date Picker -->
+                <div>
+                    <label for="dates" class="block text-lg font-semibold">Select Your Travel Dates</label>
+                    <input type="date" id="dates" name="dates" class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <!-- Number of Travelers -->
+                <div>
+                    <label for="travelers" class="block text-lg font-semibold">Number of Travelers</label>
+                    <input type="number" id="travelers" name="travelers" min="1" max="10" class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter number of travelers">
+                </div>
+    
+                <!-- Contact Information -->
+                <div>
+                    <label for="email" class="block text-lg font-semibold">Your Email</label>
+                    <input type="email" id="email" name="email" class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your email address">
+                </div>
+    
+                <!-- Special Requests -->
+                <div>
+                    <label for="requests" class="block text-lg font-semibold">Any Special Requests?</label>
+                    <textarea id="requests" name="requests" rows="4" class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Let us know if you have any special requests"></textarea>
+                </div>
+    
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition duration-300 transform hover:scale-105">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer class="p-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center">
+        <div class="max-w-6xl mx-auto">
+            <!-- Social Media Links -->
+            <div class="mb-4">
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+    
+            <!-- Footer Text -->
+            <p class="text-sm">&copy; 2025 Wanderlust Adventures. All rights reserved.</p>
+            
+            <!-- Optional Footer Links -->
+            <div class="mt-4">
+                <a href="#" class="text-sm text-gray-200 hover:text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-sm text-gray-200 hover:text-white mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

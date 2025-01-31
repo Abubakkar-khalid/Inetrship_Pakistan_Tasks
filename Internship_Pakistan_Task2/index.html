@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Adventures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll("nav a").forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header Section -->
+    <header class="flex items-center justify-between p-4 bg-blue-600 text-white fixed w-full top-0 z-10">
+        <h1 class="text-xl font-bold">Wanderlust Adventures</h1>
+        <nav>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#home" class="hover:text-orange-300">Home</a></li>
+                <li><a href="#destinations" class="hover:text-orange-300">Destinations</a></li>
+                <li><a href="#packages" class="hover:text-orange-300">Packages</a></li>
+                <li><a href="#about" class="hover:text-orange-300">About Us</a></li>
+                <li><a href="#testimonials" class="hover:text-orange-300">Testimonials</a></li>
+                <li><a href="#contact" class="hover:text-orange-300">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="book.html"   class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-700 transition">Book Now</a>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen bg-cover bg-center flex items-center justify-center text-white text-center pt-16" 
+    style="background-image: url('https://pixabay.com/photos/man-backpack-hike-mallorca-4548980/');">
+    
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-white px-6 md:px-12 max-w-3xl text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold animate-fade-in">Explore the World with <span class="text-yellow-400">Wanderlust Adventures</span></h2>
+        <p class="mt-4 text-lg text-gray-200 animate-fade-in">Discover breathtaking destinations, unforgettable experiences, and exciting adventures around the globe.</p>
+        
+        <!-- Search Box -->
+        <div class="mt-6 flex justify-center">
+            <input type="text" placeholder="Where do you want to go?" 
+                class="p-3 w-80 md:w-96 rounded-lg text-black shadow-md focus:ring-2 focus:ring-yellow-400 focus:outline-none" />
+        </div>
+
+        <!-- Call-to-Action -->
+        <button class="mt-6 px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg shadow-lg transition duration-300 ease-in-out">
+            Find Your Next Trip
+        </button>
+
+        <!-- Additional Info -->
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-gray-300">
+            <div class="flex items-center gap-2">
+                <span class="text-yellow-400 text-2xl">🌍</span>
+                <span>100+ Destinations</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-yellow-400 text-2xl">✈️</span>
+                <span>Best Travel Deals</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-yellow-400 text-2xl">🏨</span>
+                <span>Luxury Stays & Hotels</span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Featured Destinations Section -->
+    <section id="destinations" class="p-12 bg-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900">Featured Destinations</h2>
+            <p class="text-lg text-gray-600 mt-2">Discover the world's most stunning places with us.</p>
+        </div>
+    
+        <!-- Destination Cards -->
+        <div class="grid md:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto">
+            
+            <!-- Destination 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.sn2iZvtG79DSCMOU9eZHSwHaEK&w=200&h=112&c=7" alt="Paris" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800">Paris</h3>
+                    <p class="text-gray-600 mt-2">Experience the city of love and lights.</p>
+                    <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">
+                        View More
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Destination 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.ktTzH-SnhuhSJY3Kz66vRAHaE8&pid=Api" alt="Maldives" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800">Maldives</h3>
+                    <p class="text-gray-600 mt-2">Relax in a tropical paradise.</p>
+                    <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">
+                        View More
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Destination 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.vEMDdaVRJvwrtKEWWIRk7wHaE6&pid=Api" alt="Skardu" class="w-full h-60 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800">Skardu</h3>
+                    <p class="text-gray-600 mt-2">Explore breathtaking mountain landscapes.</p>
+                    <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">
+                        View More
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- Packages -->
+    <section id="packages" class="p-12 bg-gray-50">
+        <div class="text-center max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-gray-900">Our Travel Packages</h2>
+            <p class="text-lg text-gray-600 mt-2">Choose from our curated travel packages to make your vacation unforgettable.</p>
+        </div>
+    
+        <!-- Travel Packages Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto">
+            
+            <!-- Package 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.ktTzH-SnhuhSJY3Kz66vRAHaE8&pid=Api" alt="Tropical Escape" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Tropical Escape</h3>
+                    <p class="text-gray-600 mt-2">7 days in the Maldives. Relax on pristine beaches and enjoy luxurious resorts.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$1,499</span>
+                        <a href="book.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Package 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.sn2iZvtG79DSCMOU9eZHSwHaEK&pid=Api" alt="Paris Experience" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Paris Experience</h3>
+                    <p class="text-gray-600 mt-2">5 days exploring the iconic landmarks of Paris including Eiffel Tower and Louvre Museum.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$1,199</span>
+                        <a href="book.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Package 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.vEMDdaVRJvwrtKEWWIRk7wHaE6&pid=Api" alt="Adventure Tour" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Adventure Tour</h3>
+                    <p class="text-gray-600 mt-2">8 days trekking through the Himalayas. Discover the beauty of remote mountain regions.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$2,399</span>
+                        <a href="book.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Package 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.3V2qdnLqVmvqzb4jKSNPoQHaEo&pid=Api" alt="Tokyo Explorer" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Tokyo Explorer</h3>
+                    <p class="text-gray-600 mt-2">4 days in Japan's capital, with a guided tour through the culture and sights of Tokyo.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$899</span>
+                        <a href="book.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Package 5 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.EENOdUCXr43_46W8jhz5iwHaEK&pid=Api" alt="Safari Adventure" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Safari Adventure</h3>
+                    <p class="text-gray-600 mt-2">10 days in Africa. Explore the wildlife and landscapes of Kenya and Tanzania.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$3,299</span>
+                        <a href="book.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Package 6 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.19VUTOn18R_JfT7n57eiyQHaLJ&pid=Api" alt="New York City Tour" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800">New York City Tour</h3>
+                    <p class="text-gray-600 mt-2">7 days in the city that never sleeps. Visit Times Square, Central Park, and more.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$1,699</span>
+                        <a href="book.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+    <!-- About Us Section -->
+    <section id="about" class="p-12 bg-gray-100">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            
+            <!-- Left Content -->
+            <div>
+                <h2 class="text-4xl font-extrabold text-gray-900">Who We Are</h2>
+                <p class="mt-4 text-gray-600 text-lg">
+                    At <span class="font-semibold text-yellow-500">Wanderlust Adventures</span>, we craft unforgettable journeys for passionate travelers. Whether you're seeking <span class="font-semibold">exotic getaways, thrilling adventures, or relaxing retreats</span>, our expert team ensures every trip is seamless and extraordinary.
+                </p>
+                
+                <!-- Features -->
+                <div class="mt-6 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-yellow-500 text-2xl">🌍</span>
+                        <p class="text-gray-700">Over <span class="font-semibold">100+ destinations</span> worldwide</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-yellow-500 text-2xl">✈️</span>
+                        <p class="text-gray-700">Exclusive travel deals and experiences</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-yellow-500 text-2xl">🏨</span>
+                        <p class="text-gray-700">Luxury stays and handpicked accommodations</p>
+                    </div>
+                </div>
+    
+                <!-- Call-to-Action -->
+                <a href="#contact" class="inline-block mt-6 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition duration-300">
+                    Get in Touch
+                </a>
+            </div>
+    
+            <!-- Right Image -->
+            <div class="relative">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.JslQpDxsDb1JK4eXz1NnGQHaEK&w=200&h=112&c=7" 
+                     alt="About Wanderlust Adventures" class="rounded-lg shadow-lg w-full">
+                <div class="absolute inset-0 bg-black/10 rounded-lg"></div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="p-12 bg-gray-100">
+        <div class="text-center max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-gray-900">What Our Clients Say</h2>
+            <p class="text-lg text-gray-600 mt-2">Our customers love their journeys with Wanderlust Adventures. Here's what they have to say:</p>
+        </div>
+    
+        <!-- Testimonials Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto">
+            
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-400 text-3xl">⭐</span>
+                    <span class="ml-2 text-gray-600">5.0</span>
+                </div>
+                <p class="text-gray-700 italic">"Wanderlust Adventures made my honeymoon unforgettable! Everything was seamless and magical."</p>
+                <span class="block mt-4 font-bold text-gray-800">- Jane Doe</span>
+            </div>
+    
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-400 text-3xl">⭐</span>
+                    <span class="ml-2 text-gray-600">4.8</span>
+                </div>
+                <p class="text-gray-700 italic">"An amazing experience! I never thought I'd experience such breathtaking views and cultural experiences."</p>
+                <span class="block mt-4 font-bold text-gray-800">- John Smith</span>
+            </div>
+    
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-400 text-3xl">⭐</span>
+                    <span class="ml-2 text-gray-600">5.0</span>
+                </div>
+                <p class="text-gray-700 italic">"An unforgettable trip to Paris. Every detail was taken care of, and I couldn't have asked for a better experience!"</p>
+                <span class="block mt-4 font-bold text-gray-800">- Emily Adams</span>
+            </div>
+    
+            <!-- Testimonial 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-400 text-3xl">⭐</span>
+                    <span class="ml-2 text-gray-600">4.9</span>
+                </div>
+                <p class="text-gray-700 italic">"The service was exceptional, and the trips were perfectly planned. Highly recommend!"</p>
+                <span class="block mt-4 font-bold text-gray-800">- Michael Lee</span>
+            </div>
+    
+            <!-- Testimonial 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-400 text-3xl">⭐</span>
+                    <span class="ml-2 text-gray-600">5.0</span>
+                </div>
+                <p class="text-gray-700 italic">"A dream vacation to the Maldives! I couldn't have asked for a better itinerary and experience."</p>
+                <span class="block mt-4 font-bold text-gray-800">- Sarah Patel</span>
+            </div>
+    
+            <!-- Testimonial 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="flex items-center mb-4">
+                    <span class="text-yellow-400 text-3xl">⭐</span>
+                    <span class="ml-2 text-gray-600">5.0</span>
+                </div>
+                <p class="text-gray-700 italic">"The trip was flawless! Every moment felt special. I will definitely be booking again."</p>
+                <span class="block mt-4 font-bold text-gray-800">- David White</span>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="p-12 bg-gray-50">
+        <div class="text-center max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-gray-900">Contact Us</h2>
+            <p class="text-lg text-gray-600 mt-2">Have questions or want to start planning your next adventure? We’d love to hear from you!</p>
+        </div>
+    
+        <!-- Contact Form -->
+        <form class="mt-8 max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <div class="grid gap-6">
+                <!-- Name Input -->
+                <div>
+                    <input type="text" placeholder="Your Name" class="block w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <!-- Email Input -->
+                <div>
+                    <input type="email" placeholder="Your Email" class="block w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <!-- Message Textarea -->
+                <div>
+                    <textarea placeholder="Your Message" class="block w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" rows="6"></textarea>
+                </div>
+    
+                <!-- Send Button -->
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition duration-300">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    
+
+
+    <!-- Footer Section -->
+    <footer class="p-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center">
+        <div class="max-w-6xl mx-auto">
+            <!-- Social Media Links -->
+            <div class="mb-4">
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="mx-2 text-2xl hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+    
+            <!-- Footer Text -->
+            <p class="text-sm">&copy; 2025 Wanderlust Adventures. All rights reserved.</p>
+            
+            <!-- Optional Footer Links -->
+            <div class="mt-4">
+                <a href="#" class="text-sm text-gray-200 hover:text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-sm text-gray-200 hover:text-white mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
